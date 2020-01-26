@@ -1,0 +1,10 @@
+
+# Local files
+**/.DS_Store
+
+# Project files
+cfs/
+
+# Editor files
+.vscode
+
