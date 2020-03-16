@@ -1,0 +1,17 @@
+version: '3'
+services: # build artifacts
+    # The CFS base image is simply a ubuntu 18.04 image containing the required build tools
+    cfs-base-image:
+        image: cfs-base-image
+        build:
+            context: .
+            dockerfile: cfs-base-image.dockerfile
+        
+    
+    # The CFS image what actually stores and runs the project itself
+    cfs:
+        build:
+            context: .
+            dockerfile: cfs.dockerfile
+        depends_on: 
+        - cfs-base-image
