@@ -16,3 +16,14 @@ docker-compose up --build
 This will first generate the base Ubuntu image with the appropriate installed 
 dependencies, and then create a new image that performs the CFS build steps. 
 
+## Prerequisites
+
+Ensure that you initialize the git submodules recursively, using the following
+command:
+
+```
+git submodule update --init --recursive
+```
+
+This will ensure that CFS is properly cloned down, as well as all of the CFS
+submodules (i.e. apps, utilities, etc). 
